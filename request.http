@@ -1,0 +1,28 @@
+@host = http://localhost:8080
+
+### Obtener todos los usuarios
+GET {{host}}/users
+
+### Obtener un usuario por ID
+GET {{host}}/users/1
+
+### Crear un nuevo usuario
+POST {{host}}/users
+Content-Type: application/json
+
+{
+    "name": "Nuevo Usuario3",
+    "email": "nuevo.usuario3@example.com"
+}
+
+### Actualizar un usuario existente
+PUT {{host}}/users/1999
+Content-Type: application/json
+
+{
+    "name": "usuario 1 editado",
+    "email": "usuario.editado.@example.com"
+}
+
+### Eliminar un usuario
+DELETE {{host}}/users/2
